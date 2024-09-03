@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PROJECT 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                Flexbox
+            </div>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <div>
+                <h1>Flexbox crash course</h1>
+                <p>This crash course was created by hero world technology to help you learn the basics of flexbox. flexbox is a very important and useful tool in CSS</p>
+
+            </div>
+            <img src="image/grid.svg.png" alt=""> 
+        </div>
+
+    </header> 
+
+    <section class="boxes">
+        <div class="container">
+            <div class="box">
+                <h2><i class="fa fa-arrows-v"></i>Alignment and space</h2>
+                <p>A more efficient way to lay out, align and  distribute space along items in a container </p>
+            </div>
+            <div class="box">
+                <h2><i class="fa fa-arrows"></i>Tricky position</h2>
+                <p>A more efficient way to lay out, align and  distribute space along items in a container </p>
+            </div>
+            <div class="box">
+                <h2><i class="fa fa-mobile"></i> Responsive Design</h2>
+                <p>A more efficient way to lay out, align and  distribute space along items in a container </p>
+            </div>
+        </div>
+    </section>
+   
+</body>
+</html>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+   font-family: "Poppins", sans-serif;
+   font-size: 16px;
+   line-height: 1.5;
+   color: #333;
+   background-color: #a1c3ff;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,h2{
+    margin-bottom: 20px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar{
+background-color: #3474e6;
+color: #fff;
+height: 60px;
+}
+
+.navbar .container{
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+ 
+.navbar a:hover{
+    color: lightblue;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.navbar ul{
+    list-style: none;
+}
+
+.navbar ul li{
+    margin-left: 20px;
+}
+
+.logo{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.header img{
+    min-width: 400px;
+    margin: 50px 0 50px 0;
+
+}
+
+.header{
+    background-color: #0151cc;
+    color: #fff;
+    min-height: 400px;
+}
+
+.header h1{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header .container{
+display: flex;
+    justify-content: space-between;
+   align-items: center;
+}
+
+.boxes .container{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    flex: 1;
+    background-color: #0a51cc;
+    color: #fff;
+    border-radius: 20px;
+    margin: 20px 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+
+}
+
+.box i{
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+.header .container{
+ flex-direction: column;   
+ align-items: center;
+ padding-top: 20px;
+ justify-content: center;
+}
+
+.header .container div{
+    text-align: center;
+}
+.boxes .container{
+    display: block;
+}
+}
+
+
+
